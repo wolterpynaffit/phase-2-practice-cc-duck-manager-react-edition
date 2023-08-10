@@ -4,13 +4,13 @@ To get started, fork and clone the repository and run `npm install` followed by 
 
 Endpoints: You have access to all the ducks at `http://localhost:4001/ducks`.
 
-## Deliverable One
+<!-- ## Deliverable One
 
-Fetch all the ducks from the db.json and use `.map` in order to show a `DuckListCard` for each of them in the `DuckList`. State has already been built for you for this one...
+Fetch all the ducks from the db.json and use `.map` in order to show a `DuckListCard` for each of them in the `DuckList`. State has already been built for you for this one... -->
 
-## Deliverable Two
+<!-- ## Deliverable Two
 
-When a `DuckListCard` is clicked, it becomes the `featuredDuck` in state. The `featuredDuck` details are shown in the `DuckDisplay` component.
+When a `DuckListCard` is clicked, it becomes the `featuredDuck` in state. The `featuredDuck` details are shown in the `DuckDisplay` component. -->
 
 ## Deliverable Three
 
@@ -28,12 +28,12 @@ Example request:
 
 ```js
 fetch(`http://localhost:4001/ducks/2`, {
-  method: 'PATCH',
+  method: "PATCH",
   headers: {
-    'Content-Type': 'application/json'
+    "Content-Type": "application/json",
   },
-  body: JSON.stringify({likes: 4})
-})
+  body: JSON.stringify({ likes: 4 }),
+});
 ```
 
 ## Deliverable Six
@@ -44,12 +44,16 @@ Example request:
 
 ```js
 fetch(`http://localhost:4001/ducks`, {
-  method: 'POST',
+  method: "POST",
   headers: {
-    'Content-Type': 'application/json'
+    "Content-Type": "application/json",
   },
-  body: JSON.stringify({name: "Sir Quackington", image_url: "http://ducks.com/duckington.jpg", likes: 0})
-})
+  body: JSON.stringify({
+    name: "Sir Quackington",
+    image_url: "http://ducks.com/duckington.jpg",
+    likes: 0,
+  }),
+});
 ```
 
 Assume ducks start with 0 likes.

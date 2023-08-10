@@ -1,19 +1,28 @@
 import React from 'react'
+import { useState } from 'react'
 
-function DuckDisplay(props) {
+function DuckDisplay({featuredDuck}) {
+  const [count, setCount] = useState(0)
+
+  function incrementCount(){
+    setCount((count) => count + 1)
+   
+  }
+
+
   return (
-    <div className="duck-display">
-
-      {/* show all the details for the featuredDuck state here */}
-
-      <h2>{"Duck Name Goes Here"}</h2>
-
-      <img src={"#"} alt={"duck name goes here"} />
-
-      <button>0 likes</button>
-
-    </div>
+      <div className="duck-display">
+  
+        <h2>{featuredDuck.name}</h2>
+  
+        <img src={featuredDuck.img_url} alt={featuredDuck.name} />
+  
+        <button onClick={incrementCount}> {featuredDuck.likes + count }  likes</button>
+  
+      </div>
+    
   )
 }
 
 export default DuckDisplay
+
